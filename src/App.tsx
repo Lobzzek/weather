@@ -6,7 +6,7 @@ const App = () => {
 
   let [mapCards, setMapCards] = React.useState<any>();
   React.useEffect(() => {
-    fetch("http://api.openweathermap.org/data/2.5/forecast?q=London&appid=14358bcdca1ca0a20ba95b2d02b61bd4")
+    fetch("https://api.openweathermap.org/data/2.5/forecast?q=London&appid=14358bcdca1ca0a20ba95b2d02b61bd4")
       .then(rest => rest.json())
       .then(json => {
 
@@ -23,7 +23,7 @@ const App = () => {
   const city: any = React.createRef();
   const req = () => {
     if (/^[A-zА-я]+/.test(inp.current.value)) {
-      fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${inp.current.value}&appid=14358bcdca1ca0a20ba95b2d02b61bd4`)
+      fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${inp.current.value}&appid=14358bcdca1ca0a20ba95b2d02b61bd4`)
         .then(rest => rest.json())
         .then(json => {
 
