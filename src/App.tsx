@@ -23,7 +23,7 @@ const App = () => {
   const city: any = React.createRef();
   const req = () => {
     if (/^[A-zА-я]+/.test(inp.current.value)) {
-      fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${inp.current.value}&appid=14358bcdca1ca0a20ba95b2d02b61bd4`)
+      fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${inp.current.value}&appid=14358bcdca1ca0a20ba95b2d02b61bd4`)
         .then(rest => rest.json())
         .then(json => {
 
@@ -47,7 +47,7 @@ const App = () => {
     <div className="app">
       <h1 ref={city}>London</h1>
       <div className="search">
-        <input ref={inp} placeholder=" London or Лондон" type="text" />
+        <input ref={inp} placeholder=" London" type="text" />
         <button onClick={req}>&#8594;</button>
       </div>
       <div className="wrapper">
